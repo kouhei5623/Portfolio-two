@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+html {
+font-size: 62.5%;
+}
+body {
+line-height: 1;
+font: 1.6rem/1.75 'M PLUS Rounded 1c' , 'Lato', 'Noto Sans Japanese', '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; letter-spacing: 0.08em;
+}
+a {
+text-decoration: none;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+p{
+text-align: justify;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+img{
+width: 100%;
+}
+textarea,
+input,
+button{
+display: block;
+border: none;
+font: 1.6rem/1.75 'M PLUS Rounded 1c' , 'Lato', 'Noto Sans Japanese', '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; letter-spacing: 0.08em;
+}
+* {
+box-sizing: border-box;
+}
+.wrap{
+max-width: 960px;
+margin: 0 auto;
+}
+/* 共通
+================================================================================
+================================================================================*/
+/* タイトル */
+.ttl{  font-family: 'Alegreya Sans SC', sans-serif; text-align: center; font-size: 4.5rem; }
+/* タイトル下説明 */
+.ttl_description{ margin-bottom: 80px; text-align: center; font-size: 1.2rem; }
+/* 太字 */
+.bold{ font-weight: bold; }
+/* テキスト */
+.text{ text-align: justify; }
+/* ページ位置 */
+.location{ font-weight: bold; color: #000; }
+/* ページトップ */
+.page_top{ margin-bottom: 10px; text-align: center; }
+.page_top a{ font-family: 'Alegreya Sans SC', sans-serif; color: #696969; }
+/* ページネーション */
+.wp-pagenavi { margin-bottom: 15px; text-align:center; }
+.pages{ display: none; }
+.wp-pagenavi a{ padding: 11px 14px!important; border-radius: 5px!important; border: none!important; background-color: #FFFFFF; color: #000; }
+.wp-pagenavi .current{ padding: 11px 14px; border-radius: 5px; background-color: #696969; border: none; color: #FFFFFF; }
+/* 個別
+================================================================================
+================================================================================*/
+/* ヘッダー
+-------------------------------------------------------------------------------*/
+.header{ position: relative; padding: 40px 0 50px; border: 0.5px solid #d3d3d3; }
+.main_ttl{ font-family: 'Alegreya Sans SC', sans-serif; text-align: center; font-size: 6.0rem; }
+.main_ttl a{ color: #000000; }
+.description{ margin-bottom: 40px; text-align: center; font-size: 1.2rem; }
+.header_menu{ text-align: center; }
+.header_menu li{ display: inline-block; margin: 0 30px; }
+.header_menu li a{ font-family: 'Alegreya Sans SC', sans-serif; color: #5B5B5B; }
+.header_menu li a:hover{ font-weight: bold; color: #000; }
+/* メイン
+-------------------------------------------------------------------------------*/
+/* メイン */
+.main{ position: relative; width: 100%; height: 480px; background-image: url('img/back.jpg'); background-position: center; background-size: cover; }
+.main_message{ position: absolute; bottom: -130px; left: 80px; width: 600px; padding: 50px; background-color: #FFFFFF; line-height: 50px;}
+/* サービス */
+.service{ padding: 230px 0 100px; }
+.service_unit{ display: flex; justify-content: space-between; flex-wrap: wrap; width: 100%; }
+.service_unit .col{ width: 30%; }
+.service_img{ width: 40%; margin: 0 auto 30px; }
+.service_text dt{ margin-bottom: 50px; text-align: center; font-size: 2.0rem; }
+.service_text dd{ font-size: 1.4rem; }
+/* ブログ / 制作実績 */
+.blog,
+.work{ padding: 100px 0; }
+.blog_unit,
+.work_unit{ display: flex; justify-content: flex-start; flex-wrap: wrap; width: 100%; }
+.blog_unit .col,
+.work_unit .col{ width: 30%; margin-bottom: 30px; margin-right: 5%; }
+.blog_unit .col:nth-child(3n),
+.work_unit .col:nth-child(3n){ margin-right: 0; }
+.blog_unit .col h2 a,
+.work_unit .col h2 a{ color:#000000; }
+.blog_unit .col img,
+.work_unit .col img{ width: 100%; height: auto; margin-bottom: 20px; }
+.blog_unit .col p,
+.work_unit .col p{ font-size: 1.4rem; }
+.blog_unit .col time,
+.work_unit .col time{ font-size: 1.2rem; }
+/* お問い合わせ */
+.contact { padding: 100px 0 200px; }
+.contact .required{ font-size: 1.2rem; color: #b22222; }
+.contact dd { margin-bottom: 20px; }
+.contact dd input{ width: 100%; padding: 15px 10px; background-color: #f5f5f5; border-radius: 5px; }
+.contact textarea{ width: 100%; padding: 15px 10px; background-color: #f5f5f5; border-radius: 5px;}
+.contact_btn{  text-align: center; }
+.contact_btn input{ width: 200px; margin: 50px auto 0; padding: 10px 0; background-color: #FFFFFF; border: 0.5px solid #c0c0c0; border-radius: 50px; transition: .2s; }
+.contact_btn input:hover{ cursor: pointer; background-color: #c0c0c0; }
+/* フッター
+-------------------------------------------------------------------------------*/
+/* コピーライト */
+.copy{ font-family: 'Alegreya Sans SC', sans-serif; padding: 10px 0; border: 0.5px solid #d3d3d3; text-align: center; }
+/* ABOUTページ
+-------------------------------------------------------------------------------*/
+.about{ padding: 100px 0; }
+.my_unit{ display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.my_img{ width: 35%; }
+.my_img img{ border-radius: 50%; }
+.profile { width: 55%; }
+.profile .name,
+.profile .skill,
+.profile .bio{ margin-bottom: 20px; }
+.profile .name dt,
+.profile .skill dt,
+.profile .bio dt{ position: relative; font-family: 'Alegreya Sans SC', sans-serif; font-size: 2.2rem;}
+.profile dt { padding-left: 20px; }
+.profile dt:before{ content: ""; position: absolute; top: 50%; left: 0; width: 5px; height: 50%; background-color: #757575; transform: translateY(-50%); }
+.bio li{ position: relative; padding-left: 20px; }
+.bio li:before{ content:"・"; position: absolute; left: 0; }
+/* ブログ詳細ページ */
+.content{ padding: 100px 0; }
+.content time{ margin-bottom: 20px; color: #808080; }
+.content img{ width: 100%; height: auto; margin-bottom: 20px; }
+.content h1{ position: relative; margin-bottom: 20px; padding-left: 20px; font-size: 2.5rem; }
+.content h1:before{ content: ""; position: absolute; top: 50%; left: 0; width: 5px; height: 60%; background-color: #757575; transform: translateY(-50%); }
+.content p{ margin-bottom: 20px; font-size: 1.4rem; }
+.content a{ margin-bottom: 20px; color: #808080; }
+/* 404
+-------------------------------------------------------------------------------*/
+.error_page{ padding: 100px 0; }
+.error_page .error_text{ text-align: center; }
+/* 960px以下 */
+@media(max-width:960px ){
+  /* 共通
+  ================================================================================
+  ================================================================================*/
+  .wrap{ padding: 0 5%; }
+  /* 個別
+  ================================================================================
+  ================================================================================*/
+  /* メイン
+  -------------------------------------------------------------------------------*/
+  /* メイン */
+  .main_message{ left: 50%; width: 90%; transform: translateX(-50%);}
+  .main_message p br{ display: none; }
+  /* サービス */
+  .service_img{ width: 50%; }
+  /* ABOUTページ
+  -------------------------------------------------------------------------------*/
+  .my_unit{ flex-wrap: wrap; }
+  .my_img{ width: 60%; margin: 0 auto 20px; }
+  .my_img img{ border-radius: 50%; }
+  .profile { width: 60%; margin: 0 auto; }
+}
+/* 640px以下 */
+@media(max-width:640px ){
+  /* 共通
+  ================================================================================
+  ================================================================================*/
+  /* タイトル */
+  .ttl{ font-size: 3.5rem; }
+  /* タイトル下説明 */
+  .ttl_description{ margin-bottom: 40px; }
+  /* 個別
+  ================================================================================
+  ================================================================================*/
+  /* メイン
+  -------------------------------------------------------------------------------*/
+  /* メイン */
+  .main_message{ bottom: -100px; padding: 40px; line-height: 40px;}
+  .main_ttl{ font-size: 4.0rem; }
+  /* サービス */
+  .service{ padding: 180px 0 50px; }
+  .service_img{ width: 40%; }
+  .service_unit .col{ width: 100%; margin-bottom: 50px; }
+  /* ブログ */
+  .blog,
+  .work{ padding: 50px 0; }
+  .blog_unit .col,
+  .work_unit .col{ width: 60%; margin: 0 auto 30px; }
+  .blog_unit .col:nth-child(3n),
+  .work_unit .col:nth-child(3n){ margin: 0 auto 30px; }
+  /* 実績 */
+  .work{ padding: 50px 0; }
+  .work_unit .col{ width: 60%; margin: 0 auto 30px; }
+  .work_unit .col:nth-child(3n){ margin: 0 auto 30px; }
+  /* お問い合わせ */
+  .contact { padding: 50px 0; }
+  /* ABOUTページ
+  -------------------------------------------------------------------------------*/
+  .about{ padding: 50px 0; }
+  .my_img{ width: 100%; }
+  .profile { width: 100%; }
+  /* ブログ詳細ページ */
+  .content{ padding: 50px 0; }
+  .content h1{ font-size: 2.0rem; }
+  .content h1:before{ height: 100%; }
+  /* 404
+  -------------------------------------------------------------------------------*/
+  .error_page{ padding: 50px 0; }
+  .error_text{ font-size: 1.4rem; }
+}
+/* 475px以下 */
+@media(max-width:475px ){
+  /* 共通
+  ================================================================================
+  ================================================================================*/
+
+  /* 個別
+  ================================================================================
+  ================================================================================*/
+  /* ヘッダー
+  -------------------------------------------------------------------------------*/
+  .header{ padding: 20px 0; }
+  .header_menu li{ display: block; margin: 0 0 20px; }
+  /* メイン
+  -------------------------------------------------------------------------------*/
+  /* メイン */
+  .main_message{ padding: 30px; line-height: 40px;}
+  .main_message p{ font-size: 1.4rem; }
+  /* ブログ */
+  .blog,
+  .work{ padding: 50px 0; }
+  .blog_unit .col,
+  .work_unit .col{ width: 100%; margin: 0 auto 30px; }
+  .blog_unit .col:nth-child(3n),
+  .work_unit .col:nth-child(3n){ margin: 0 auto 30px; }
+}
